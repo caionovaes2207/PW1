@@ -1,0 +1,94 @@
+
+.topo {
+  background-color: #111;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+
+.cadastro {
+    font-size: 18px;
+    color: rgb(253, 253, 253);
+    text-decoration: none;
+}
+ 
+a{
+  color: #ddd;
+}
+
+header {
+    background-color: #111;
+    color: red;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+body {
+  background-color:#511414;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+h1 {
+  color: #fdfafa;
+  margin-bottom: 25px;
+}
+
+.formulario {
+  background-color: white;
+  padding: 30px;
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
