@@ -1,4 +1,4 @@
-/* BODY E RESET */
+
 body {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ img {
     border-radius: 8px;
 }
 
-/* TOPO / HEADER */
+
 .topo {
   background-color: #111;
   color: white;
@@ -19,6 +19,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -29,46 +30,36 @@ img {
 .logo img {
   width: 50px;
   margin-right: 10px;
-  border-radius: 8px;
-}
-
-.logo h1 {
-  font-size: 24px;
-  margin: 0;
 }
 
 .cadastro a {
     font-size: 18px;
-    color: rgb(254, 253, 253);
+    color: white;
     text-decoration: none;
 }
 
-a {
-    color: #ddd;
-}
-
-/* INÍCIO */
 .inicio {
     text-align: center;
     padding: 20px;
 }
 
-.inicio h1 {
-    color: rgb(232, 239, 239);
+.inicio h1, .inicio p {
+    color: #fff;
 }
 
-.inicio p {
-    color: #fefefe;
-}
 
-/* CATÁLOGOS */
 .catalogos {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 20px;
     padding: 40px;
     max-width: 1000px;
     margin: auto;
+}
+
+h2 {
+    text-align: center;
 }
 
 .filmes {
@@ -81,23 +72,20 @@ a {
     height: auto;
 }
 
-/* TABELA */
+
 .tabela {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
     padding: 20px;
 }
 
 .tabela table {
     margin: auto;
     border-collapse: collapse;
-    width: 80%;
+    width: 90%;
     background-color: white;
 }
 
 thead {
     background-color: #2c3e50;
-    font-weight: bold;
     color: white;
 }
 
@@ -107,21 +95,11 @@ th, td {
     text-align: center;
 }
 
-td {
-    color: #111;
-}
-
 .preço {
     color: green;
 }
 
-/* TITULOS */
-h2 {
-    text-align: center;
-    color: #ddd;
-}
 
-/* CARROSSEL */
 .carousel {
   position: relative;
   width: 100%;
@@ -130,7 +108,7 @@ h2 {
   border-radius: 10px;
   margin: 30px auto;
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .slides {
@@ -145,22 +123,16 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
   padding: 20px;
+  font-weight: 600;
 }
 
-.slide1 { background: linear-gradient(135deg, #5e0b13, #000000); }
-.slide2 { background: linear-gradient(135deg, #771a1a, #000000); }
-.slide3 { background: linear-gradient(135deg, #2c1a1a, #000000); }
 
-.slide span { color: #29d2aa; }
-
-/* BOTÕES DO CARROSSEL */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 32px;
+  font-size: 28px;
   background: rgba(0, 0, 0, 0.3);
   padding: 8px 12px;
   border-radius: 6px;
@@ -170,3 +142,119 @@ h2 {
 
 .prev { left: 10px; }
 .next { right: 10px; }
+
+
+.slide1 {
+    background: url("../imagens/terceira.jpeg") center/cover no-repeat;
+}
+
+.slide2 {
+    background: url("../imagens/segunda.jpeg") center/cover no-repeat;
+}
+
+.slide3 {
+    background: url("../imagens/primeira.jpeg") center/cover no-repeat;
+}
+
+
+.slide {
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+
+.slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); 
+    z-index: 1;
+}
+
+
+.slide * {
+    position: relative;
+    z-index: 2;
+}
+
+
+@media (max-width: 1024px) {
+
+    .catalogos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filmes {
+        width: 45%;
+    }
+
+    .carousel {
+        font-size: 1.3rem;
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .topo {
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .catalogos {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .filmes {
+        width: 100%;
+    }
+
+    .tabela table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .carousel {
+        font-size: 1.1rem;
+        height: 160px;
+    }
+
+    .prev, .next {
+        font-size: 22px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .topo {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.3rem;
+    }
+
+    .carousel {
+        height: 140px;
+        font-size: 1rem;
+    }
+
+    .slides {
+        font-size: 1rem;
+    }
+
+    td, th {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}
